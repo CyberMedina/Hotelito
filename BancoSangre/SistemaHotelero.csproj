@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCE616D1-EC01-45AE-98C2-65E5016BA264}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BancoSangre</RootNamespace>
+    <AssemblyName>BancoSangre</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Operacion">
+      <HintPath>F:\Operacion\Operacion\bin\Debug\netcoreapp2.1\Operacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Operaciones">
+      <HintPath>..\..\Operaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos.Designer.cs">
+      <DependentUpon>Archivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Datosenviar.cs" />
+    <Compile Include="Controlador\HotelitoControlador.cs" />
+    <Compile Include="Modelo\Datos.cs" />
+    <Compile Include="Vista\Accesible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Accesible.Designer.cs">
+      <DependentUpon>Accesible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BotonSalir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BotonSalir.Designer.cs">
+      <DependentUpon>BotonSalir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Clase Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Clase Alta.Designer.cs">
+      <DependentUpon>Clase Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Economica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\.Designer.cs">
+      <DependentUpon>Economica.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListadoDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ListadoDeClientes.Designer.cs">
+      <DependentUpon>ListadoDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Recibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Recibo.Designer.cs">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Validarelcombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Validarelcombo.Designer.cs">
+      <DependentUpon>Validarelcombo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\Accesible.resx">
+      <DependentUpon>Accesible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BotonSalir.resx">
+      <DependentUpon>BotonSalir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Clase Alta.resx">
+      <DependentUpon>Clase Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Economica.resx">
+      <DependentUpon>Economica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ListadoDeClientes.resx">
+      <DependentUpon>ListadoDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Recibo.resx">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Validarelcombo.resx">
+      <DependentUpon>Validarelcombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_icon-icons.com_55835.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel Blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LlaveBlanca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HotelCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LlaveCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioCeleste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habitacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habitacion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClaseAlta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clasebaja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clasemedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clasebaja2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cama %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base de datos Hotel\1.txt" />
+    <Content Include="Base de datos Hotel\Abel Calero.txt" />
+    <Content Include="Base de datos Hotel\Boris Briceño.txt" />
+    <Content Include="Base de datos Hotel\Jhonatan Medina.txt" />
+    <Content Include="Base de datos Hotel\ObjForbes.txt" />
+    <Content Include="Base de datos Hotel\Reservaciones.txt" />
+    <Content Include="Base de datos Hotel\Uapeton.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
