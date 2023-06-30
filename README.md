@@ -1,4 +1,4 @@
-# Aplicación escritorio para gestión de reservas de un Hotel
+# Aplicación escritorio para gestión de reservas de un Hotel con Windows Form y c#
 
 ### Explicación:
 
