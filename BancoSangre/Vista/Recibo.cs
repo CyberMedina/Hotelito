@@ -15,6 +15,13 @@ namespace BancoSangre.Vista
 {
     public partial class Recibo : Form
     {
+        public event EventHandler GuardarClicked;
+
+        protected virtual void OnGuardarClicked(EventArgs e)
+        {
+            GuardarClicked?.Invoke(this, e);
+        }
+
 
         public string Consulta = "Reservaciones.txt";
         public string path = @"C:\Base de datos Hotel";
@@ -56,6 +63,9 @@ namespace BancoSangre.Vista
             datosenviars.Add(info);
             Guardar();
             MessageBox.Show("Se ha registrado al Cliente satsifactoriamente!");
+
+            //Acá se activa el evento de guardar y que se recibe en el formulario registro
+            OnGuardarClicked(EventArgs.Empty);
             this.Close();
             Registro po = new Registro();
             po.Close();

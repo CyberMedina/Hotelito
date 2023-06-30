@@ -49,21 +49,26 @@ namespace BancoSangre.Controlador
         }
         public void BorrarCampos(Control control)
         {
-            foreach (var txt in control.Controls)
+            foreach (Control ctrl in control.Controls)
             {
-                if (txt is TextBox )
+                if (ctrl is TextBox)
                 {
-                    ((TextBox)txt).Clear();
+                    ((TextBox)ctrl).Clear();
                 }
-                else if (txt is ComboBox)
+                else if (ctrl is ComboBox)
                 {
-                    ((ComboBox)txt).SelectedIndex = 0;
+                    ((ComboBox)ctrl).SelectedIndex = 0;
+                }
+
+                // Si el control es un panel, llamar recursivamente a la función para borrar los campos dentro del panel
+                if (ctrl is Panel)
+                {
+                    BorrarCampos(ctrl);
                 }
             }
-            
-            
         }
-       
+
+
     }
-    
+
 }

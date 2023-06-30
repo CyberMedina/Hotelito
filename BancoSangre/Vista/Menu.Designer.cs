@@ -37,8 +37,11 @@
             this.txtInfo = new System.Windows.Forms.Label();
             this.Labio = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.LabelFecha = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.PanelTodo = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.AnimacionSideBar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.AnimacionSliderBarRegreso = new BunifuAnimatorNS.BunifuTransition(this.components);
@@ -46,9 +49,7 @@
             this.RadioPanelTotal = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.LabelFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SlideBar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -72,6 +73,7 @@
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
             this.PanelTodo.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SlideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -131,8 +133,8 @@
             // 
             this.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Panel2.Controls.Add(this.label2);
             this.Panel2.Controls.Add(this.LabelFecha);
+            this.Panel2.Controls.Add(this.label2);
             this.Panel2.Controls.Add(this.SlideBar);
             this.AnimacionSliderBarRegreso.SetDecoration(this.Panel2, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSideBar.SetDecoration(this.Panel2, BunifuAnimatorNS.DecorationType.None);
@@ -142,6 +144,33 @@
             this.Panel2.Size = new System.Drawing.Size(300, 700);
             this.Panel2.TabIndex = 1;
             this.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // LabelFecha
+            // 
+            this.LabelFecha.AutoSize = true;
+            this.AnimacionSideBar.SetDecoration(this.LabelFecha, BunifuAnimatorNS.DecorationType.None);
+            this.AnimacionSliderBarRegreso.SetDecoration(this.LabelFecha, BunifuAnimatorNS.DecorationType.None);
+            this.LabelFecha.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFecha.ForeColor = System.Drawing.Color.White;
+            this.LabelFecha.Location = new System.Drawing.Point(100, 2);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(50, 20);
+            this.LabelFecha.TabIndex = 5;
+            this.LabelFecha.Text = "label2";
+            this.LabelFecha.Click += new System.EventHandler(this.LabelFecha_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.AnimacionSideBar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.AnimacionSliderBarRegreso.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Fecha y Hora: ";
             // 
             // Panel3
             // 
@@ -161,14 +190,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.PanelTodo.Controls.Add(this.label1);
-            this.PanelTodo.Controls.Add(this.pictureBox1);
+            this.PanelTodo.Controls.Add(this.panel5);
             this.AnimacionSliderBarRegreso.SetDecoration(this.PanelTodo, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSideBar.SetDecoration(this.PanelTodo, BunifuAnimatorNS.DecorationType.None);
             this.PanelTodo.Location = new System.Drawing.Point(19, 25);
             this.PanelTodo.Name = "PanelTodo";
             this.PanelTodo.Size = new System.Drawing.Size(1048, 663);
             this.PanelTodo.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.AutoSize = true;
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.label1);
+            this.AnimacionSliderBarRegreso.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
+            this.AnimacionSideBar.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
+            this.panel5.Location = new System.Drawing.Point(450, 200);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(243, 243);
+            this.panel5.TabIndex = 2;
             // 
             // label1
             // 
@@ -180,7 +221,7 @@
             this.AnimacionSliderBarRegreso.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(531, 366);
+            this.label1.Location = new System.Drawing.Point(86, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 22);
             this.label1.TabIndex = 1;
@@ -240,50 +281,20 @@
             this.RadioPanelTotal.ElipseRadius = 7;
             this.RadioPanelTotal.TargetControl = this.PanelTodo;
             // 
-            // LabelFecha
-            // 
-            this.LabelFecha.AutoSize = true;
-            this.AnimacionSideBar.SetDecoration(this.LabelFecha, BunifuAnimatorNS.DecorationType.None);
-            this.AnimacionSliderBarRegreso.SetDecoration(this.LabelFecha, BunifuAnimatorNS.DecorationType.None);
-            this.LabelFecha.Font = new System.Drawing.Font("Segoe UI Emoji", 12.75F);
-            this.LabelFecha.ForeColor = System.Drawing.Color.White;
-            this.LabelFecha.Location = new System.Drawing.Point(133, 0);
-            this.LabelFecha.Name = "LabelFecha";
-            this.LabelFecha.Size = new System.Drawing.Size(55, 22);
-            this.LabelFecha.TabIndex = 5;
-            this.LabelFecha.Text = "label2";
-            this.LabelFecha.Click += new System.EventHandler(this.LabelFecha_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.AnimacionSideBar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.AnimacionSliderBarRegreso.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12.75F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Fecha y Hora: ";
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.AnimacionSideBar.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSliderBarRegreso.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = global::BancoSangre.Properties.Resources.Hotel_Blanco;
-            this.pictureBox1.Location = new System.Drawing.Point(514, 252);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(169, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -478,7 +489,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "   Listado  de clientes";
+            this.bunifuFlatButton1.ButtonText = "   Reservas";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnimacionSideBar.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSliderBarRegreso.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
@@ -503,7 +514,7 @@
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(251, 60);
             this.bunifuFlatButton1.TabIndex = 6;
-            this.bunifuFlatButton1.Text = "   Listado  de clientes";
+            this.bunifuFlatButton1.Text = "   Reservas";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.LightGray;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -519,7 +530,8 @@
             this.HabitacionesClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnimacionSideBar.SetDecoration(this.HabitacionesClick, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSliderBarRegreso.SetDecoration(this.HabitacionesClick, BunifuAnimatorNS.DecorationType.None);
-            this.HabitacionesClick.DisabledColor = System.Drawing.Color.Gray;
+            this.HabitacionesClick.DisabledColor = System.Drawing.Color.Transparent;
+            this.HabitacionesClick.Enabled = false;
             this.HabitacionesClick.Iconcolor = System.Drawing.Color.Transparent;
             this.HabitacionesClick.Iconimage = global::BancoSangre.Properties.Resources.cama__1_;
             this.HabitacionesClick.Iconimage_right = null;
@@ -608,7 +620,7 @@
             this.MenuSlide.Name = "MenuSlide";
             this.MenuSlide.Size = new System.Drawing.Size(54, 22);
             this.MenuSlide.TabIndex = 3;
-            this.MenuSlide.Text = "Menù";
+            this.MenuSlide.Text = "Menú";
             // 
             // Logo
             // 
@@ -715,6 +727,7 @@
             this.AnimacionSliderBarRegreso.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSideBar.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -725,6 +738,8 @@
             this.Panel3.ResumeLayout(false);
             this.PanelTodo.ResumeLayout(false);
             this.PanelTodo.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SlideBar.ResumeLayout(false);
             this.SlideBar.PerformLayout();
@@ -776,6 +791,7 @@
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

@@ -18,6 +18,8 @@ namespace BancoSangre.Vista
 {
     public partial class Registro : Form
     {
+        public Form FormularioPadre { get; set; }
+
         public string Consulta = "Reservaciones.txt";
         public string path = @"C:\Base de datos Hotel";
         public Registro()
@@ -124,13 +126,13 @@ namespace BancoSangre.Vista
                 var renta = objD.Where(x => x.ID == int.Parse(comboBoxHabtiacion.SelectedValue.ToString())).FirstOrDefault();
 
                 subtotal = renta.Precio;
-                Dolar = renta.Precio * 34;
+                Dolar = renta.Precio * 36;
             
            
         }
-            
 
-         public void RecibMostrar()
+
+        public void RecibMostrar()
         {
 
             Recibo f = new Recibo();
@@ -151,8 +153,14 @@ namespace BancoSangre.Vista
             f.ReciboFechayhora.Text = DateTime.Now.ToString();
 
 
+            // Acá se suscribe al evento guardar clic del showdialog
+            f.GuardarClicked += (s, args) =>
+            {
+                borrar_paneles();
+            };
+
             f.ShowDialog();
-            
+
         }
         public void ValidacionDeTodoRegistro()
         {
@@ -274,6 +282,32 @@ namespace BancoSangre.Vista
         {
             Comboboxacompañantes.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        private void buttonIniciar_Click_1(object sender, EventArgs e)
+        {
+            ValidacionDeTodoRegistro();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            borrar_paneles();
+        }
+
+        public void borrar_paneles()
+        {
+            HotelitoControlador hotelitoControlador = new HotelitoControlador();
+            hotelitoControlador.BorrarCampos(panel4);  // Reemplaza "panelRegistro" con el nombre de tu panel
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+
+
+
     }
 }
 

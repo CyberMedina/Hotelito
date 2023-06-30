@@ -25,6 +25,8 @@ namespace BancoSangre.Vista
             Disponibilidad4();
         }
 
+
+
         private void LabelClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -240,7 +242,10 @@ namespace BancoSangre.Vista
 
             }
         }
-    
-    
+
+        private void LabelClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

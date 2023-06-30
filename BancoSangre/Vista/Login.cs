@@ -17,6 +17,7 @@ namespace BancoSangre.Vista
         public Login()
         {
             InitializeComponent();
+
         }
         string contraseña;
         List<Datosenviar> datosenviars = new List<Datosenviar>();
@@ -39,8 +40,6 @@ namespace BancoSangre.Vista
                     //obj.txtInfo.Text = txtUser.Text;
                     //recibo.ReciboCrearNombre.Text = txtUser.Text;
                    
-                  
-                    
                     this.Hide();
                     obj.Show();
                     MessageBox.Show("Ha entrado exitosamente al Sistema!");
@@ -55,24 +54,6 @@ namespace BancoSangre.Vista
             {
                 MessageBox.Show("No se reconoce al Usuario");
             }
-
-        }
-
-        private void txtUser_Click(object sender, EventArgs e)
-        {
-            txtUser.Clear();
-            picuser.BackgroundImage = Properties.Resources.UsuarioCeleste;
-            panel1.BackColor = Color.FromArgb(78, 184, 206);
-            txtUser.ForeColor = Color.FromArgb(78, 184, 206);
-
-            picpass.BackgroundImage = Properties.Resources.LlaveCeleste;
-            panel2.BackColor = Color.WhiteSmoke;
-            txtPassword.ForeColor = Color.WhiteSmoke;
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
 
         }
 

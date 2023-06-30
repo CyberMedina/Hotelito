@@ -36,25 +36,51 @@ namespace BancoSangre
         //Se crea instancia para abrir formularios dentro de paneles
         public void Abrirformulario<MiForm>() where MiForm : Form, new()
         {
-            Form Formulario;
-            Formulario = PanelTodo.Controls.OfType<MiForm>().FirstOrDefault();
-            if (Formulario == null)
+            // Verificar si el formulario seleccionado es Registro
+            if (typeof(MiForm) == typeof(Registro))
             {
-                Formulario = new MiForm();
-                Formulario.TopLevel = false;
-                PanelTodo.Controls.Add(Formulario);
-                Formulario.Dock = DockStyle.Fill;
-                PanelTodo.Tag = Formulario;
-                Formulario.Show();
-                Formulario.BringToFront();
+                // Verificar si ya hay un formulario Registro abierto
+                var formularioRegistro = PanelTodo.Controls.OfType<Registro>().FirstOrDefault();
+                if (formularioRegistro != null)
+                {
+                    // Si hay un formulario Registro abierto, solo se muestra y se trae al frente
+                    formularioRegistro.Show();
+                    formularioRegistro.BringToFront();
+                    return;
+                }
             }
-                
             else
             {
-                Formulario.BringToFront();
+                // Ocultar formulario Registro si está abierto
+                var formularioRegistro = PanelTodo.Controls.OfType<Registro>().FirstOrDefault();
+                if (formularioRegistro != null)
+                {
+                    formularioRegistro.Hide();
+                }
+
+                // Cerrar formulario abierto previamente, si existe y no es Registro
+                var formularioAbierto = PanelTodo.Controls.OfType<Form>().FirstOrDefault(f => f != formularioRegistro);
+                if (formularioAbierto != null)
+                {
+                    formularioAbierto.Close();
+                    PanelTodo.Controls.Remove(formularioAbierto);
+                }
             }
+
+            // Abrir el nuevo formulario
+            Form Formulario = new MiForm();
+            Formulario.TopLevel = false;
+            PanelTodo.Controls.Add(Formulario);
+            Formulario.Dock = DockStyle.Fill;
+            Formulario.Show();
+            Formulario.BringToFront();
         }
-       
+
+
+
+
+
+
         private void Restaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
@@ -71,7 +97,8 @@ namespace BancoSangre
 
         private void Salir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            BotonSalir botonSalir = new BotonSalir();
+            botonSalir.ShowDialog();
         }
 
         private void Minimizar_Click(object sender, EventArgs e)
@@ -136,7 +163,7 @@ namespace BancoSangre
         {
           
             Abrirformulario<ListadoDeClientes>();
-           
+
         }
 
         private void bunifuFlatButton2_Click_1(object sender, EventArgs e)

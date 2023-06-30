@@ -175,5 +175,10 @@ namespace BancoSangre.Vista
 
             }
         }
+
+        private void LabelClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

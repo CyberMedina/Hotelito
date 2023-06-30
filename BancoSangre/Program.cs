@@ -21,6 +21,7 @@ namespace SistemaHotelero
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new BancoSangre.Vista.Login());
+
         }
     }
 }

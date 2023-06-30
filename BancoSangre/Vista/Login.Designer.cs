@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.buttonIniciar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LabelClose = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,12 +39,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picpass = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.picpass = new System.Windows.Forms.PictureBox();
             this.picuser = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picpass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picuser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonIniciar
@@ -59,16 +60,6 @@
             this.buttonIniciar.Text = "Iniciar Sesión";
             this.buttonIniciar.UseVisualStyleBackColor = false;
             this.buttonIniciar.Click += new System.EventHandler(this.buttonIniciar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BancoSangre.Properties.Resources.HotelCeleste;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // LabelClose
             // 
@@ -158,16 +149,6 @@
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 13;
             // 
-            // picpass
-            // 
-            this.picpass.Image = global::BancoSangre.Properties.Resources.LlaveBlanca;
-            this.picpass.Location = new System.Drawing.Point(46, 246);
-            this.picpass.Name = "picpass";
-            this.picpass.Size = new System.Drawing.Size(24, 24);
-            this.picpass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picpass.TabIndex = 14;
-            this.picpass.TabStop = false;
-            // 
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -183,6 +164,16 @@
             this.txtUser.Text = "Usuario";
             this.txtUser.Click += new System.EventHandler(this.txtUser_Click_1);
             // 
+            // picpass
+            // 
+            this.picpass.Image = global::BancoSangre.Properties.Resources.LlaveBlanca;
+            this.picpass.Location = new System.Drawing.Point(46, 246);
+            this.picpass.Name = "picpass";
+            this.picpass.Size = new System.Drawing.Size(24, 24);
+            this.picpass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picpass.TabIndex = 14;
+            this.picpass.TabStop = false;
+            // 
             // picuser
             // 
             this.picuser.Image = global::BancoSangre.Properties.Resources.UsuarioBlanco;
@@ -192,6 +183,16 @@
             this.picuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picuser.TabIndex = 12;
             this.picuser.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BancoSangre.Properties.Resources.HotelCeleste;
+            this.pictureBox1.Location = new System.Drawing.Point(109, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(106, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -213,12 +214,13 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonIniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picpass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picuser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
