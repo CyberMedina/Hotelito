@@ -8,7 +8,6 @@ Proyecto desarrollado para la asignatura de Programación II. Se trata de una ap
 
 ## 📚 Tabla de Contenidos
 
-- [Roles](#-roles)  
 - [Características](#-características)  
 - [Tecnologías Usadas](#-tecnologías-usadas)  
 - [Instalación](#-instalación)  
