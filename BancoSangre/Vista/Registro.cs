@@ -13,7 +13,6 @@ using Microsoft.Office.Interop.Excel;
 using System.IO;
 using BancoSangre.Controlador;
 using BancoSangre.Modelo;
-using Operaciones;
 namespace BancoSangre.Vista
 {
     public partial class Registro : Form
