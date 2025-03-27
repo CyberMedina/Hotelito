@@ -48,5 +48,5 @@ Proyecto desarrollado para la asignatura de Programación II. Se trata de una ap
 ## 📬 Contacto
 
 - ✉️ **Correo:** jhonatanmedina5255@gmail.com
-- 💼 **LinkedIn:** https://www.linkedin.com/in/jhonatan-medina-308713232/
+- 💼 **LinkedIn:** www.linkedin.com/in/jhonatan-jazmil-medina-aguirre-28862a358
 
